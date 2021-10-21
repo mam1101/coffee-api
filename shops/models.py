@@ -70,6 +70,16 @@ class Cafe(LocationModel):
         verbose_name_plural = 'Cafes'
 
 
+class CafeNote(BaseModel):
+    tag = models.CharField(max_length=256)
+    description = models.TextField()
+
+
+    class Meta:
+        verbose_name = 'Cafe Note'
+        verbose_name_plural = 'Cafe Notes'
+
+
 class Distributer(LocationModel):
     name = models.CharField(max_length=256)
     slug = models.SlugField(max_length=256, default='', blank=True)
